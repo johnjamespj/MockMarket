@@ -1,11 +1,10 @@
-import { Button } from "components/button";
+import { Scaffolding } from "./layout/dashboard/scaffolding";
 import { Root } from "./root";
-
 export function App() {
   return (
     <div className="App">
       <Root>
-        <Button variant="contained" color="antares">Test</Button>
+        <Scaffolding />
       </Root>
     </div>
   );

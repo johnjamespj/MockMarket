@@ -11,10 +11,14 @@ export const palette: PaletteOptions = {
         secondary: colors.blueGrey[600],
     },
     secondary: {
-        main: "#4A148C",
+        main: "#12005E",
     },
     primary: {
-        main: "#12005E",
+        main: "#4A148C",
+    },
+    action: {
+        selected: 'rgba(124, 67, 189, 0.36)',
+        hover: 'rgba(124, 67, 189, 0.2)',
     },
     error: {
         main: "rgb(213,0,0)",

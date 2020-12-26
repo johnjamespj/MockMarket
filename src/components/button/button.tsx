@@ -30,7 +30,7 @@ interface ExtendedColorProps {
     color?: ExtendedColor;
 }
 
-type ExtendedButtonProps = ExtendedColorProps & Omit<ButtonProps, 'color'>;
+export type ExtendedButtonProps = ExtendedColorProps & Omit<ButtonProps, 'color'>;
 
 function getColor(color: ExtendedColor, theme: Theme): string | null {
     switch (color) {
@@ -56,10 +56,10 @@ function getPropColor(color: ExtendedColor): PropTypes.Color{
     }
 }
 
-export const Button = (props: ExtendedButtonProps) => {
+export function Button(props: ExtendedButtonProps){
     const { color = "default", ...rest } = props
 
-    const _button = withStyles((theme) => {
+    const StyledButton = withStyles((theme) => {
         const colorCode = getColor(color, theme)
 
         if (colorCode === null || colorCode === undefined) {
@@ -77,5 +77,5 @@ export const Button = (props: ExtendedButtonProps) => {
         })
     })(B)
 
-    return <_button color={getPropColor(color)} {...rest} />
+    return <StyledButton color={getPropColor(color)} {...rest} />
 }

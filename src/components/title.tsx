@@ -1,5 +1,11 @@
-import Button from "@material-ui/core/Button";
+import { Helmet } from 'react-helmet';
 
-export default function Title() {
-    return <Button>Test</Button>
+interface TitleProps {
+    title: string
+}
+
+export default function Title({ title }: TitleProps) {
+    return <Helmet>
+        <title>{title}</title>
+    </Helmet>
 }
