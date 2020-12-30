@@ -1,7 +1,7 @@
-import React from 'react';
-import sampleImage from 'assets/sample.jpeg';
-import { Scrollbars } from 'react-custom-scrollbars';
-import { RailItem } from "./rail_item";
+import React from 'react'
+import sampleImage from 'assets/sample.jpeg'
+import { Scrollbars } from 'react-custom-scrollbars'
+import { RailItem } from "./rail_item"
 import { makeStyles, Theme, createStyles, Avatar } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingTop: theme.spacing(2)
         },
     }),
-);
+)
 
 
 export function NavRailDrawer() {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return <Scrollbars autoHide>
         <div className={classes.navRailRoot}>
@@ -50,5 +50,5 @@ export function NavRailDrawer() {
                 icon="equalizer"
                 selected={false} />
         </div>
-    </Scrollbars>;
+    </Scrollbars>
 }

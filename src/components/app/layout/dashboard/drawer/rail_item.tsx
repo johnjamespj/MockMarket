@@ -1,7 +1,7 @@
-import React from 'react';
-import Icon from '@material-ui/core/Icon';
-import { makeStyles, withStyles, createStyles, Theme, Button } from '@material-ui/core';
-import { joinClass } from 'helpers/joinClass';
+import React from 'react'
+import Icon from '@material-ui/core/Icon'
+import { makeStyles, withStyles, createStyles, Theme, Button } from '@material-ui/core'
+import { joinClass } from 'helpers/joinClass'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
             color: theme.palette.primary.main,
         },
     }),
-);
+)
 
 
 const RailButton = withStyles((theme: Theme) => createStyles({
@@ -32,9 +32,9 @@ const RailButton = withStyles((theme: Theme) => createStyles({
 }))(Button)
 
 interface RailItemProps {
-    icon: string;
-    text: string;
-    selected: boolean;
+    icon: string
+    text: string
+    selected: boolean
 }
 
 export function RailItem({
@@ -42,7 +42,7 @@ export function RailItem({
     text,
     selected
 }: RailItemProps) {
-    const classes = useStyles();
+    const classes = useStyles()
 
     const StyleRailButton = withStyles((theme) => {
         if (selected)
@@ -54,12 +54,12 @@ export function RailItem({
                         backgroundColor: theme.palette.action.selected,
                     },
                 }
-            });
+            })
 
 
         else
-            return ({ root: {} });
-    })(RailButton);
+            return ({ root: {} })
+    })(RailButton)
 
     return (
         <StyleRailButton>
@@ -68,5 +68,5 @@ export function RailItem({
                 [classes.labelTextSelected]: selected
             })}>{text}</div>
         </StyleRailButton>
-    );
+    )
 }

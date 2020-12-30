@@ -1,8 +1,8 @@
-import React from 'react';
-import { Avatar, createStyles, IconButton, makeStyles, Theme, Typography, List, Icon, Divider } from '@material-ui/core';
-import sampleImage from 'assets/sample.jpeg';
-import { Scrollbars } from 'react-custom-scrollbars';
-import { NavListItem } from "./navlist_item";
+import React from 'react'
+import { Avatar, createStyles, IconButton, makeStyles, Theme, Typography, List, Icon, Divider } from '@material-ui/core'
+import sampleImage from 'assets/sample.jpeg'
+import { Scrollbars } from 'react-custom-scrollbars'
+import { NavListItem } from "./navlist_item"
 
 export const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -21,10 +21,10 @@ export const useStyles = makeStyles((theme: Theme) =>
             width: `calc(${theme.size.drawerWidth}px - ${2 * theme.spacing(1)}px)`
         },
     }),
-);
+)
 
 export function NavDrawer() {
-    const classes = useStyles();
+    const classes = useStyles()
 
     return (
         <Scrollbars
@@ -73,5 +73,5 @@ export function NavDrawer() {
             </List>
             <Divider />
         </Scrollbars>
-    );
+    )
 }

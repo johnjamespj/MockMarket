@@ -26,12 +26,12 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: theme.spacing(3),
         },
     }),
-);
+)
 
 interface DrawerProps {
-    mobileOpen: boolean;
-    navRailOpen: boolean;
-    onMobileDrawerToggle: () => void;
+    mobileOpen: boolean
+    navRailOpen: boolean
+    onMobileDrawerToggle: () => void
 }
 
 export function Drawer({
@@ -39,8 +39,8 @@ export function Drawer({
     navRailOpen,
     onMobileDrawerToggle
 }: DrawerProps) {
-    const classes = useStyles();
-    const theme = useTheme();
+    const classes = useStyles()
+    const theme = useTheme()
 
     return (
         <div className={classes.root}>
@@ -78,5 +78,5 @@ export function Drawer({
                 </Hidden>
             </nav>
         </div>
-    );
+    )
 }

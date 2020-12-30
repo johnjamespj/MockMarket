@@ -1,0 +1,370 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "symbol": {
+            "type": "string"
+        },
+        "dividendDate": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "twoHundredDayAverageChangePercent": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "fiftyTwoWeekLowChangePercent": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "language": {
+            "type": "string"
+        },
+        "regularMarketDayRange": {
+            "$ref": "#/definitions/FormatedValue",
+            "description": "Instrument's Day's Range {EQUITY}"
+        },
+        "epsForward": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "regularMarketDayHigh": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "twoHundredDayAverageChange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "twoHundredDayAverage": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "askSize": {
+            "$ref": "#/definitions/FormatedValueLong",
+            "description": "Instrument's Bid Size (eg: 0.00 x 11) {EQUITY}"
+        },
+        "bookValue": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "marketCap": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "fiftyTwoWeekHighChange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "fiftyTwoWeekRange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "fiftyDayAverageChange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "averageDailyVolume3Month": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "firstTradeDateMilliseconds": {
+            "type": "integer"
+        },
+        "exchangeDataDelayedBy": {
+            "type": "integer"
+        },
+        "trailingAnnualDividendRate": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "fiftyTwoWeekLow": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "regularMarketVolume": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "market": {
+            "type": "string"
+        },
+        "postMarketPrice": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "quoteSourceName": {
+            "type": "string"
+        },
+        "messageBoardId": {
+            "type": "string"
+        },
+        "priceHint": {
+            "type": "integer"
+        },
+        "exchange": {
+            "type": "string"
+        },
+        "regularMarketDayLow": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "sourceInterval": {
+            "type": "integer"
+        },
+        "shortName": {
+            "type": "string"
+        },
+        "region": {
+            "type": "string"
+        },
+        "fiftyDayAverageChangePercent": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "fullExchangeName": {
+            "type": "string"
+        },
+        "financialCurrency": {
+            "type": "string"
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "gmtOffSetMilliseconds": {
+            "type": "integer"
+        },
+        "regularMarketOpen": {
+            "$ref": "#/definitions/FormatedValue",
+            "description": "Instrument's Open price (Open) {EQUITY}"
+        },
+        "regularMarketTime": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "regularMarketChangePercent": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "trailingAnnualDividendYield": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "quoteType": {
+            "$ref" : "#/definitions/QuoteTypes"
+        },
+        "fiftyTwoWeekLowChange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "averageDailyVolume10Day": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "fiftyTwoWeekHighChangePercent": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "trailingPE": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "tradeable": {
+            "type": "boolean"
+        },
+        "postMarketTime": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "currency": {
+            "type": "string"
+        },
+        "sharesOutstanding": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "regularMarketPreviousClose": {
+            "$ref": "#/definitions/FormatedValue",
+            "description": "Instrument price for last day (Previous Close) {EQUITY}"
+        },
+        "fiftyTwoWeekHigh": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "postMarketChangePercent": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "exchangeTimezoneName": {
+            "type": "string"
+        },
+        "bidSize": {
+            "$ref": "#/definitions/FormatedValueLong",
+            "description": "Instrument's Bid size (eg: 0.00 x 8) {EQUITY}"
+        },
+        "regularMarketChange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "priceEpsCurrentYear": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "fiftyDayAverage": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "epsCurrentYear": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "exchangeTimezoneShortName": {
+            "type": "string"
+        },
+        "marketState": {
+            "type": "string"
+        },
+        "regularMarketPrice": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "postMarketChange": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "forwardPE": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "ask": {
+            "$ref": "#/definitions/FormatedValue",
+            "description": "Instrument's Ask (eg: 0.00 x 11) {EQUITY}"
+        },
+        "epsTrailingTwelveMonths": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "bid": {
+            "$ref": "#/definitions/FormatedValue",
+            "description": "Instrument's Bid (eg: 0.00 x 8) {EQUITY}"
+        },
+        "priceToBook": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "triggerable": {
+            "type": "boolean"
+        },
+        "longName": {
+            "type": "string"
+        },
+        "circulatingSupply": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "fromCurrency": {
+            "type": "string"
+        },
+        "lastMarket": {
+            "type": "string"
+        },
+        "toCurrency": {
+            "type": "string"
+        },
+        "startDate": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "coinImageUrl": {
+            "type": "string"
+        },
+        "volume24Hr": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "volumeAllCurrencies": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "headSymbol": {
+            "type": "boolean"
+        },
+        "expireIsoDate": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "underlyingExchangeSymbol": {
+            "type": "string"
+        },
+        "openInterest": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "headSymbolAsString": {
+            "type": "string"
+        },
+        "underlyingSymbol": {
+            "type": "string"
+        },
+        "contractSymbol": {
+            "type": "boolean"
+        },
+        "expireDate": {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "trailingThreeMonthReturns": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "ytdReturn": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "trailingThreeMonthNavReturns": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "strike": {
+            "$ref": "#/definitions/FormatedValue"
+        },
+        "earningsTimestamp" : {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "earningsTimestampEnd" : {
+            "$ref": "#/definitions/FormatedValueLong"
+        },
+        "earningsTimestampStart" : {
+            "$ref": "#/definitions/FormatedValueLong"
+        }
+    },
+    "required": [
+        "fullExchangeName",
+        "exchangeTimezoneName",
+        "symbol",
+        "gmtOffSetMilliseconds",
+        "exchangeDataDelayedBy",
+        "firstTradeDateMilliseconds",
+        "language",
+        "exchangeTimezoneShortName",
+        "quoteType",
+        "marketState",
+        "market",
+        "priceHint",
+        "tradeable",
+        "sourceInterval",
+        "exchange",
+        "region",
+        "triggerable"
+    ],
+    "additionalProperties": false,
+    "definitions": {
+        "FormatedValueLong": {
+            "type": "object",
+            "properties": {
+                "raw": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "fmt": {
+                    "type": "string"
+                },
+                "longFmt": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "raw",
+                "fmt",
+                "longFmt"
+            ],
+            "additionalProperties": false
+        },
+        "FormatedValue": {
+            "type": "object",
+            "properties": {
+                "raw": {
+                    "type": [
+                        "number",
+                        "string"
+                    ]
+                },
+                "fmt": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "raw",
+                "fmt"
+            ],
+            "additionalProperties": false
+        },
+        "QuoteTypes": {
+            "type": "string",
+            "description": "This includes EQUITY, MUTUALFUND, ETF, CRYPTOCURRENCY, FUTURE, OPTION, CURRENCY, INDEX",
+            "enum": [
+                "EQUITY",
+                "MUTUALFUND",
+                "ETF",
+                "CRYPTOCURRENCY",
+                "FUTURE",
+                "OPTION",
+                "CURRENCY",
+                "INDEX"
+            ]
+        }
+    }
+}

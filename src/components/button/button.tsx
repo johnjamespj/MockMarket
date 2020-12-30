@@ -18,19 +18,19 @@ type CommonColors =
     | 'rigel'
     | 'agena'
     | 'spica'
-    | 'mimosa';
+    | 'mimosa'
 
 export type ExtendedColor =
     PropTypes.Color
     | CommonColors
     | 'accent'
-    | 'decorative';
+    | 'decorative'
 
 interface ExtendedColorProps {
-    color?: ExtendedColor;
+    color?: ExtendedColor
 }
 
-export type ExtendedButtonProps = ExtendedColorProps & Omit<ButtonProps, 'color'>;
+export type ExtendedButtonProps = ExtendedColorProps & Omit<ButtonProps, 'color'>
 
 function getColor(color: ExtendedColor, theme: Theme): string | null {
     switch (color) {

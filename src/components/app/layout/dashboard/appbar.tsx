@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { createStyles, fade, Theme, makeStyles, Icon, InputBase, IconButton, Toolbar, AppBar as MUIAppBar } from '@material-ui/core';
+import React, { useState } from 'react'
+import { createStyles, fade, Theme, makeStyles, Icon, InputBase, IconButton, Toolbar, AppBar as MUIAppBar } from '@material-ui/core'
 import { MoreInfoPrompt } from './more_info_prompt'
-import { joinClass } from 'helpers/joinClass';
+import { Notifications } from './notifications'
+import { joinClass } from 'helpers/joinClass'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -82,24 +83,37 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
     }),
-);
+)
 
 interface AppBarProps {
-    navRailOpen: boolean;
-    onMenuToggle: () => void;
+    navRailOpen: boolean
+    onMenuToggle: () => void
 }
 
 export function AppBar({ navRailOpen, onMenuToggle }: AppBarProps) {
-    const classes = useStyles();
+    const classes = useStyles()
     const [moreInfoPromptOpen, setMoreInfoPromptOpen] = useState(false)
+    const [anchorEl, setanchorEl] = useState<null | HTMLElement>(null)
 
     const handlePromptClose = () => {
         setMoreInfoPromptOpen((x: boolean) => !x)
     }
 
+    const handleNoficationToggle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+        if (anchorEl === null)
+            setanchorEl(e.currentTarget)
+        else
+            handleNotificationClose()
+    }
+
+    const handleNotificationClose = () => {
+        setanchorEl(null)
+    }
+
     return <div className={classes.root}>
         <MUIAppBar>
             <Toolbar>
+                <Notifications anchorEl={anchorEl} onClose={handleNotificationClose} />
                 <MoreInfoPrompt open={moreInfoPromptOpen} onClose={handlePromptClose} />
                 <div className={joinClass("", {
                     [classes.navrailDrawerSpacer]: navRailOpen,
@@ -134,6 +148,7 @@ export function AppBar({ navRailOpen, onMenuToggle }: AppBarProps) {
                         className={classes.trailingIconStyle}
                         color="inherit"
                         aria-label="open drawer"
+                        onClick={handleNoficationToggle}
                     >
                         <Icon>notifications</Icon>
                     </IconButton>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Icon, ListItemText, ListItemIcon, withStyles, Theme, ListItem } from '@material-ui/core';
+import React from 'react'
+import { Icon, ListItemText, ListItemIcon, withStyles, Theme, ListItem } from '@material-ui/core'
 
 const StyledListItem = withStyles((theme: Theme) => ({
     root: {
@@ -13,9 +13,9 @@ const StyledListItem = withStyles((theme: Theme) => ({
 }))(ListItem)
 
 export interface NavListItemProps {
-    text: string;
-    icon: string;
-    selected: boolean;
+    text: string
+    icon: string
+    selected: boolean
 }
 
 export function NavListItem({ text, icon, selected }: NavListItemProps) {
@@ -24,5 +24,5 @@ export function NavListItem({ text, icon, selected }: NavListItemProps) {
             <Icon color={selected ? "primary" : "inherit"}>{icon}</Icon>
         </ListItemIcon>
         <ListItemText primary={text} />
-    </StyledListItem>;
+    </StyledListItem>
 }

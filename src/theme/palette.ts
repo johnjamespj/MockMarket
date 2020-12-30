@@ -51,4 +51,4 @@ export const palette: PaletteOptions = {
         decorative: "rgb(244,58,172)",
         accent: "rgb(25,231,252)"
     },
-};
+}
