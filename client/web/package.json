@@ -28,7 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-model-types": "json2ts -i ./src/fetch/models/schema/*.json -o ./src/fetch/models/types/ --unreachableDefinitions"
+    "generate-model-types": "json2ts -i ./src/fetch/models/schema/*.json -o ./src/fetch/models/types/ --unreachableDefinitions",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +51,12 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-essentials": "^6.1.14",
+    "@storybook/addon-links": "^6.1.14",
+    "@storybook/node-logger": "^6.1.14",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.14",
     "@types/react-custom-scrollbars": "^4.0.7",
     "@types/react-helmet": "^6.1.0",
     "json-schema-to-typescript": "^10.0.3"
